@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Unit Gawat Darurat (UGD)</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: linear-gradient(135deg, #dc3545, #fd7e14);
+            color: #333;
+        }
+
+        .container {
+            min-height: 100vh;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 40px;
+            margin: 0;
+        }
+
+        .header p {
+            font-size: 20px;
+            opacity: 0.95;
+        }
+
+        .alur {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .step {
+            background: white;
+            border-radius: 22px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+        }
+
+        .step img {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+            margin-bottom: 20px;
+        }
+
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            background: #dc3545;
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .step h3 {
+            margin: 10px 0 0;
+            font-size: 22px;
+        }
+
+        .note {
+            margin-top: 40px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 18px;
+            padding: 25px;
+            font-size: 20px;
+        }
+
+        .back {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .back a {
+            display: inline-block;
+            padding: 18px 40px;
+            font-size: 20px;
+            background: #212529;
+            color: white;
+            text-decoration: none;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>UNIT GAWAT DARURAT (UGD)</h1>
+        <p>Pelayanan Darurat • Cepat • Prioritas Kondisi Pasien</p>
+    </div>
+
+    <div class="alur">
+
+        <div class="step">
+            <img src="assets/ugd/datang.png">
+            <div class="step-number">1</div>
+            <h3>Pasien Datang ke UGD</h3>
+        </div>
+
+        <div class="step">
+            <img src="assets/ugd/triage.png">
+            <div class="step-number">2</div>
+            <h3>Triage (Penilaian Kondisi)</h3>
+        </div>
+
+        <div class="step">
+            <img src="assets/ugd/dokter.png">
+            <div class="step-number">3</div>
+            <h3>Pemeriksaan Dokter UGD</h3>
+        </div>
+
+        <div class="step">
+            <img src="assets/ugd/tindakan.png">
+            <div class="step-number">4</div>
+            <h3>Tindakan Medis Darurat</h3>
+        </div>
+
+        <div class="step">
+            <img src="assets/ugd/observasi.png">
+            <div class="step-number">5</div>
+            <h3>Observasi / Stabilitas Pasien</h3>
+        </div>
+
+        <div class="step">
+            <img src="assets/ugd/keputusan.png">
+            <div class="step-number">6</div>
+            <h3>Keputusan: Pulang / Rawat Inap / Rujukan</h3>
+        </div>
+
+    </div>
+
+    <div class="note">
+        ⚠️ <strong>Catatan:</strong><br>
+        Pelayanan UGD diberikan berdasarkan tingkat kegawatan pasien.
+        Pasien dengan kondisi darurat akan diprioritaskan.
+    </div>
+
+    <div class="back">
+        <a href="index.html">⬅ Kembali ke Menu Utama</a>
+    </div>
+</div>
+
+</body>
+</html>
