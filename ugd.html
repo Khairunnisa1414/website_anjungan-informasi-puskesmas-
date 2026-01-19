@@ -1,160 +1,156 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>Unit Gawat Darurat (UGD)</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: "Segoe UI", Arial, sans-serif;
-            background: linear-gradient(135deg, #dc3545, #fd7e14);
-            color: #333;
-        }
+<meta charset="UTF-8">
+<title>Alur Unit Gawat Darurat</title>
+<style>
+body{
+    margin:0;
+    font-family:"Segoe UI",Arial,sans-serif;
+    background:linear-gradient(135deg,#dc3545,#fd7e14);
+}
 
-        .container {
-            min-height: 100vh;
-            padding: 40px;
-            box-sizing: border-box;
-        }
+.container{
+    min-height:100vh;
+    padding:40px;
+}
 
-        .header {
-            text-align: center;
-            color: white;
-            margin-bottom: 40px;
-        }
+.header{
+    text-align:center;
+    color:#fff;
+    margin-bottom:40px;
+}
 
-        .header h1 {
-            font-size: 40px;
-            margin: 0;
-        }
+.header h1{
+    font-size:42px;
+    margin:0;
+}
 
-        .header p {
-            font-size: 20px;
-            opacity: 0.95;
-        }
+.flowchart{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
 
-        .alur {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
+.box{
+    background:#fff;
+    padding:25px 40px;
+    border-radius:20px;
+    font-size:22px;
+    font-weight:600;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+    text-align:center;
+    min-width:320px;
+}
 
-        .step {
-            background: white;
-            border-radius: 22px;
-            padding: 30px;
-            text-align: center;
-            box-shadow: 0 12px 30px rgba(0,0,0,0.25);
-        }
+.box img{
+    width:80px;
+    margin-bottom:10px;
+}
 
-        .step img {
-            width: 150px;
-            height: 150px;
-            object-fit: contain;
-            margin-bottom: 20px;
-        }
+.arrow{
+    font-size:40px;
+    color:white;
+    margin:15px 0;
+}
 
+.split{
+    display:flex;
+    gap:120px;
+    margin-top:20px;
+}
 
-        .step-number {
-            width: 50px;
-            height: 50px;
-            margin: 0 auto 15px;
-            border-radius: 50%;
-            background: #dc3545;
-            color: white;
-            font-size: 22px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+.column{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
 
-        .step h3 {
-            margin: 10px 0 0;
-            font-size: 22px;
-        }
+.small-box{
+    background:#fff;
+    padding:20px 30px;
+    border-radius:18px;
+    font-size:20px;
+    font-weight:600;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+    text-align:center;
+    min-width:260px;
+}
 
-        .note {
-            margin-top: 40px;
-            background: rgba(255,255,255,0.9);
-            border-radius: 18px;
-            padding: 25px;
-            font-size: 20px;
-        }
+.back{
+    margin-top:50px;
+    text-align:center;
+}
 
-        .back {
-            margin-top: 40px;
-            text-align: center;
-        }
-
-        .back a {
-            display: inline-block;
-            padding: 18px 40px;
-            font-size: 20px;
-            background: #212529;
-            color: white;
-            text-decoration: none;
-            border-radius: 15px;
-        }
-    </style>
+.back a{
+    background:#212529;
+    color:white;
+    text-decoration:none;
+    padding:18px 40px;
+    border-radius:15px;
+    font-size:20px;
+}
+</style>
 </head>
 <body>
 
 <div class="container">
+
     <div class="header">
-        <h1>UNIT GAWAT DARURAT (UGD)</h1>
-        <p>Pelayanan Darurat • Cepat • Prioritas Kondisi Pasien</p>
+        <h1>ALUR UNIT GAWAT DARURAT (UGD)</h1>
+        <p>Pelayanan Cepat • Prioritas Kondisi Darurat</p>
     </div>
 
-    <div class="alur">
+    <div class="flowchart">
 
-        <div class="step">
-            <img src="assets/ugd/datang.png">
-            <div class="step-number">1</div>
-            <h3>Pasien Datang ke UGD</h3>
+        <div class="box">
+            <img src="assets/ugd/ugd.png"><br>
+            Pelayanan Gawat Darurat
         </div>
 
-        <div class="step">
-            <img src="assets/ugd/triage.png">
-            <div class="step-number">2</div>
-            <h3>Triage (Penilaian Kondisi)</h3>
+        <div class="arrow">⬇</div>
+
+        <div class="box">
+            <img src="assets/ugd/tindakan.png"><br>
+            Pengobatan / Tindakan
         </div>
 
-        <div class="step">
-            <img src="assets/ugd/dokter.png">
-            <div class="step-number">3</div>
-            <h3>Pemeriksaan Dokter UGD</h3>
+        <div class="split">
+
+            <div class="column">
+                <div class="arrow">⬇</div>
+                <div class="small-box">
+                    <img src="assets/ugd/apotik.png"><br>
+                    Apotik
+                </div>
+                <div class="arrow">⬇</div>
+                <div class="small-box">
+                    <img src="assets/ugd/pulang.png"><br>
+                    Pulang
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="arrow">⬇</div>
+                <div class="small-box">
+                    <img src="assets/ugd/rujukan.png"><br>
+                    Rujuk Lanjut
+                </div>
+                <div class="arrow">⬇</div>
+                <div class="small-box">
+                    <img src="assets/ugd/rumahsakit.png"><br>
+                    Rumah Sakit
+                </div>
+            </div>
+
         </div>
 
-        <div class="step">
-            <img src="assets/ugd/tindakan.png">
-            <div class="step-number">4</div>
-            <h3>Tindakan Medis Darurat</h3>
-        </div>
-
-        <div class="step">
-            <img src="assets/ugd/observasi.png">
-            <div class="step-number">5</div>
-            <h3>Observasi / Stabilitas Pasien</h3>
-        </div>
-
-        <div class="step">
-            <img src="assets/ugd/keputusan.png">
-            <div class="step-number">6</div>
-            <h3>Keputusan: Pulang / Rawat Inap / Rujukan</h3>
-        </div>
-
-    </div>
-
-    <div class="note">
-        ⚠️ <strong>Catatan:</strong><br>
-        Pelayanan UGD diberikan berdasarkan tingkat kegawatan pasien.
-        Pasien dengan kondisi darurat akan diprioritaskan.
     </div>
 
     <div class="back">
         <a href="index.html">⬅ Kembali ke Menu Utama</a>
     </div>
+
 </div>
 
 </body>

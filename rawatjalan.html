@@ -1,154 +1,198 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>Pelayanan Rujukan</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: "Segoe UI", Arial, sans-serif;
-            background: linear-gradient(135deg, #198754, #20c997);
-            color: #333;
-        }
+<meta charset="UTF-8">
+<title>Alur Rawat Jalan</title>
+<style>
+body{
+    margin:0;
+    font-family:"Segoe UI",Arial,sans-serif;
+    background:linear-gradient(135deg,#0d6efd,#20c997);
+}
 
-        .container {
-            min-height: 100vh;
-            padding: 40px;
-            box-sizing: border-box;
-        }
+.container{
+    min-height:100vh;
+    padding:40px;
+}
 
-        .header {
-            text-align: center;
-            color: white;
-            margin-bottom: 40px;
-        }
+.header{
+    text-align:center;
+    color:#fff;
+    margin-bottom:40px;
+}
 
-        .header h1 {
-            font-size: 40px;
-            margin: 0;
-        }
+.header h1{
+    font-size:42px;
+    margin:0;
+}
 
-        .header p {
-            font-size: 20px;
-            opacity: 0.95;
-        }
+.flow{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
 
-        .alur {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
+.box{
+    background:#fff;
+    padding:22px 40px;
+    border-radius:20px;
+    font-size:22px;
+    font-weight:600;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+    text-align:center;
+    min-width:340px;
+}
 
-        .step {
-            background: white;
-            border-radius: 24px;
-            padding: 35px;
-            text-align: center;
-            box-shadow: 0 14px 34px rgba(0,0,0,0.25);
-        }
+.box img{
+    width:70px;
+    margin-bottom:10px;
+}
 
-        .step img {
-            width: 120px;
-            height: 120px;
-            object-fit: contain;
-            margin-bottom: 20px;
-        }
+.arrow{
+    font-size:38px;
+    color:white;
+    margin:12px 0;
+}
 
-        .step-number {
-            width: 50px;
-            height: 50px;
-            margin: 0 auto 15px;
-            border-radius: 50%;
-            background: #198754;
-            color: white;
-            font-size: 22px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+.split{
+    display:flex;
+    gap:120px;
+    margin-top:20px;
+}
 
-        .step h3 {
-            margin: 10px 0 0;
-            font-size: 22px;
-        }
+.column{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
 
-        .note {
-            margin-top: 40px;
-            background: rgba(255,255,255,0.9);
-            border-radius: 18px;
-            padding: 25px;
-            font-size: 20px;
-        }
+.small-box{
+    background:#fff;
+    padding:18px 30px;
+    border-radius:18px;
+    font-size:20px;
+    font-weight:600;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+    text-align:center;
+    min-width:260px;
+}
 
-        .back {
-            margin-top: 40px;
-            text-align: center;
-        }
+.back{
+    margin-top:50px;
+    text-align:center;
+}
 
-        .back a {
-            display: inline-block;
-            padding: 18px 40px;
-            font-size: 20px;
-            background: #212529;
-            color: white;
-            text-decoration: none;
-            border-radius: 15px;
-            text-decoration: none;
-        }
-    </style>
+.back a{
+    background:#212529;
+    color:white;
+    text-decoration:none;
+    padding:18px 40px;
+    border-radius:15px;
+    font-size:20px;
+}
+</style>
 </head>
 <body>
 
 <div class="container">
+
     <div class="header">
-        <h1>PELAYANAN RUJUKAN</h1>
-        <p>Alur Rujukan Pasien Puskesmas</p>
+        <h1>ALUR PELAYANAN RAWAT JALAN</h1>
+        <p>Puskesmas • Mudah Dipahami • Visual</p>
     </div>
 
-    <div class="alur">
+    <div class="flow">
 
-        <div class="step">
-            <img src="assets/rujukan/periksa.png">
-            <div class="step-number">1</div>
-            <h3>Pemeriksaan oleh Dokter</h3>
+        <div class="box">
+            <img src="assets/rawatjalan/rawatjalan.png"><br>
+            Rawat Jalan
         </div>
 
-        <div class="step">
-            <img src="assets/rujukan/keputusan.png">
-            <div class="step-number">2</div>
-            <h3>Penentuan Perlu Rujukan</h3>
+        <div class="arrow">⬇</div>
+
+        <div class="box">
+            <img src="assets/rawatjalan/antrian.png"><br>
+            Antrian
         </div>
 
-        <div class="step">
-            <img src="assets/rujukan/input.png">
-            <div class="step-number">3</div>
-            <h3>Input Data Rujukan</h3>
+        <div class="arrow">⬇</div>
+
+        <div class="box">
+            <img src="assets/rawatjalan/pendaftaran.png"><br>
+            Pendaftaran
         </div>
 
-        <div class="step">
-            <img src="assets/rujukan/cetak.png">
-            <div class="step-number">4</div>
-            <h3>Cetak Surat Rujukan</h3>
+        <div class="arrow">⬇</div>
+
+        <div class="box">
+            <img src="assets/rawatjalan/nurse.png"><br>
+            Nurse Station
         </div>
 
-        <div class="step">
-            <img src="assets/rujukan/rs.png">
-            <div class="step-number">5</div>
-            <h3>Menuju Fasilitas Rujukan</h3>
+        <div class="split">
+
+            <!-- PASIEN SEHAT -->
+            <div class="column">
+                <div class="arrow">⬇</div>
+                <div class="small-box">
+                    <img src="assets/rawatjalan/sehat.png"><br>
+                    Pasien Sehat
+                </div>
+
+                <div class="arrow">⬇</div>
+                <div class="small-box">
+                    <img src="assets/rawatjalan/tatausaha.png"><br>
+                    Tata Usaha
+                </div>
+
+                <div class="arrow">⬇</div>
+                <div class="small-box">
+                    <img src="assets/rawatjalan/apotik.png"><br>
+                    Apotik
+                </div>
+
+                <div class="arrow">⬇</div>
+                <div class="small-box">
+                    <img src="assets/rawatjalan/pulang.png"><br>
+                    Pulang
+                </div>
+            </div>
+
+            <!-- PASIEN SAKIT -->
+            <div class="column">
+                <div class="arrow">⬇</div>
+                <div class="small-box">
+                    <img src="assets/rawatjalan/sakit.png"><br>
+                    Pasien Sakit
+                </div>
+
+                <div class="arrow">⬇</div>
+                <div class="small-box">
+                    <img src="assets/rawatjalan/pemeriksaan.png"><br>
+                    Ruang Pemeriksaan
+                </div>
+
+                <div class="arrow">⬇</div>
+                <div class="small-box">
+                    <img src="assets/rawatjalan/rujukan.png"><br>
+                    Rujuk Lanjut
+                </div>
+
+                <div class="arrow">⬇</div>
+                <div class="small-box">
+                    <img src="assets/rawatjalan/rumahsakit.png"><br>
+                    Rumah Sakit
+                </div>
+            </div>
+
         </div>
 
-    </div>
-
-    <div class="note">
-        ℹ️ <strong>Informasi:</strong><br>
-        Rujukan berlaku sesuai ketentuan BPJS Kesehatan dan fasilitas yang dituju.
-        Pastikan data pasien lengkap.
     </div>
 
     <div class="back">
         <a href="index.html">⬅ Kembali ke Menu Utama</a>
     </div>
+
 </div>
 
 </body>
